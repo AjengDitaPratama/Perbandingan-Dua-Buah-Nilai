@@ -1,0 +1,45 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package perbandinganduabuahnilai;
+
+/**
+ *
+ * @author LENOVO
+ * Nama : Ajeng Dita Pratama
+ * Kelas : Sistem Informasi
+ * NIM : 23176009
+ * Deskripsi program : Program ini berisi program untuk menampilkan
+ * perbandingan dua buah nilai
+ */
+import java.util.Scanner;
+public class PerbandinganDuaBuahNilai {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String ulangi;
+
+        do {
+            System.out.println("=======Program Perbandingan Nilai=======");
+            System.out.print("Masukkan nilai pertama : ");
+            int nilai1 = input.nextInt();
+            System.out.print("Masukkan nilai kedua : ");
+            int nilai2 = input.nextInt();
+
+            if (nilai1 > nilai2) {
+                System.out.println("Hasil : " + nilai1 + " Lebih besar dari " + nilai2);
+            } else if (nilai1 < nilai2) {
+                System.out.println("Hasil : " + nilai1 + " Lebih kecil dari " + nilai2);
+            } else {
+                System.out.println("Hasil : " + nilai1 + " Sama dengan " + nilai2);
+            }
+
+            System.out.print("Ulangi Aktifitas ? (Ya/Tidak) : ");
+            ulangi = input.next();
+        } while (ulangi.equalsIgnoreCase("Ya"));
+
+        System.out.println("BUILD SUCCESSFUL");
+        input.close();
+    }
+}
